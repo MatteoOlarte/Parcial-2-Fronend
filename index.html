@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=flight"
+    />
+    <link href="./styles/main.css" rel="stylesheet" />
+    <link href="./styles/navbar.css" rel="stylesheet" />
+    <link href="./styles/button.css" rel="stylesheet" />
+    <link href="./styles/dropdown.css" rel="stylesheet" />
+    <link href="./styles/form-control.css" rel="stylesheet" />
+    <link href="./styles/index.css" rel="stylesheet" />
+    <title>Aeropuerto el Plateado</title>
+  </head>
+
+  <body>
+    <script src="./js/search-bar.js"></script>
+    
+    <!--#region navigation -->
+    <header style="position: sticky; top: 0; z-index: 1000">
+      <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="container-fluid auto">
+          <a href="index.html" class="navbar-brand ff-heading fs-4"> El Plateado </a>
+
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbar-menu"
+            aria-controls="navbar-menu"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div id="navbar-menu" class="offcanvas offcanvas-end" tabindex="-1">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    El Aeropuerto
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="./index.html" class="dropdown-item"> Inicio </a>
+                    </li>
+                    <li>
+                      <a href="./flights.html" class="dropdown-item"> Vuelos </a>
+                    </li>
+                    <li>
+                      <a href="./parking.html" class="dropdown-item"> Parking </a>
+                    </li>
+                    <li>
+                      <a href="./stores.html" class="dropdown-item"> Tiendas </a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="./flights.html" class="nav-link">Vuelos</a>
+                </li>
+                <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                  <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-color-onsurface-2"></div>
+                  <hr class="d-lg-none my-2 text-color-onsurface-2" />
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 -960 960 960"
+                      height="24px"
+                      width="24px"
+                    >
+                      <path
+                        d="M480-720q-33 0-56.5-23.5T400-800q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800q0 33-23.5 56.5T480-720ZM680-80v-200H480q-33 0-56.5-23.5T400-360v-240q0-33 23.5-56.5T480-680q24 0 41.5 10.5T559-636q55 66 99.5 90.5T760-520v80q-53 0-107-23t-93-55v138h120q33 0 56.5 23.5T760-300v220h-80Zm-280 0q-83 0-141.5-58.5T200-280q0-72 45.5-127T360-476v82q-35 14-57.5 44.5T280-280q0 50 35 85t85 35q39 0 69.5-22.5T514-240h82q-14 69-69 114.5T400-80Z"
+                      />
+                    </svg>
+                    <span class="d-lg-none">Accesibilidad</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <script src="./js/dark-mode.js"></script>
+                  <a  href="#" class="nav-link" onclick="toggleTheme()">
+                    <svg
+                      class=""
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 -960 960 960"
+                      width="24px"
+                      fill="#e8eaed"
+                    >
+                      <path
+                        d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm40-83q119-15 199.5-104.5T800-480q0-123-80.5-212.5T520-797v634Z"
+                      />
+                    </svg>
+                    <span class="d-lg-none">Modo Negro</span>
+                  </a>
+                </li>
+                <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+                  <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-color-onsurface-2"></div>
+                  <hr class="d-lg-none my-2 text-color-onsurface-2" />
+                </li>
+                <li class="nav-item">
+                  <form role="search" onsubmit="onSearch(event)">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Buscar"
+                        aria-label="Search"
+                      />
+                      <button class="btn btn-outline-primary" type="submit">Buscar</button>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--#endregion-->
+
+    <section>
+      <main class="surface surface-auto" style="--mdc-theme-surface-padding-y: 10rem">
+        <div class="text-center mb-5">
+          <h2 class="ff-heading fs-1 fw-light text-color-static-onsurface-inverse-1">
+            Bienvenidos al segundo mejor
+          </h2>
+          <h2 class="ff-heading fs-1 fw-bolder text-color-static-onsurface-inverse-1">
+            Aeropuerto de Suramérica
+          </h2>
+        </div>
+
+        <div class="hero-container mb-5">
+          <form role="search" onsubmit="onSearch(event)">
+            <div class="input-group">
+              <div class="form-floating">
+                <input
+                  id="input-search-main"
+                  type="text"
+                  class="form-control"
+                  aria-label="Search"
+                  placeholder=""
+                />
+                <label for="input-search-main"> Buscar vuelo, aerolinea o ciudad </label>
+              </div>
+              <button class="btn btn-primary" type="submit">Buscar</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="hero-container">
+          <ul class="menu-grid">
+            <li class="menu-item">
+              <a href="./flights.html" class="menu-link">
+                <svg
+                  class="item-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#e8eaed"
+                >
+                  <path
+                    d="M280-80v-100l120-84v-144L80-280v-120l320-224v-176q0-33 23.5-56.5T480-880q33 0 56.5 23.5T560-800v176l320 224v120L560-408v144l120 84v100l-200-60-200 60Z"
+                  />
+                </svg>
+                <span class="item-text"> Vuelos </span>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="./parking.html" class="menu-link">
+                <svg
+                  class="item-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#e8eaed"
+                >
+                  <path
+                    d="M240-120v-720h280q100 0 170 70t70 170q0 100-70 170t-170 70H400v240H240Zm160-400h128q33 0 56.5-23.5T608-600q0-33-23.5-56.5T528-680H400v160Z"
+                  />
+                </svg>
+                <span class="item-text"> Parking </span>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="./stores.html" class="menu-link">
+                <svg
+                  class="item-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#e8eaed"
+                >
+                  <path
+                    d="M201-120q-33 0-56.5-23.5T121-200v-318q-23-21-35.5-54t-.5-72l42-136q8-26 28.5-43t47.5-17h556q27 0 47 16.5t29 43.5l42 136q12 39-.5 71T841-518v318q0 33-23.5 56.5T761-120H201Zm368-440q27 0 41-18.5t11-41.5l-22-140h-78v148q0 21 14 36.5t34 15.5Zm-180 0q23 0 37.5-15.5T441-612v-148h-78l-22 140q-4 24 10.5 42t37.5 18Zm-178 0q18 0 31.5-13t16.5-33l22-154h-78l-40 134q-6 20 6.5 43t41.5 23Zm540 0q29 0 42-23t6-43l-42-134h-76l22 154q3 20 16.5 33t31.5 13ZM201-200h560v-282q-5 2-6.5 2H751q-27 0-47.5-9T663-518q-18 18-41 28t-49 10q-27 0-50.5-10T481-518q-17 18-39.5 28T393-480q-29 0-52.5-10T299-518q-21 21-41.5 29.5T211-480h-4.5q-2.5 0-5.5-2v282Zm560 0H201h560Z"
+                  />
+                </svg>
+                <span class="item-text"> Tiendas </span>
+              </a>
+            </li>
+
+            <li class="menu-item">
+              <a href="./admin.html" class="menu-link">
+                <svg
+                  class="item-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#e8eaed"
+                >
+                  <path
+                    d="M680-280q25 0 42.5-17.5T740-340q0-25-17.5-42.5T680-400q-25 0-42.5 17.5T620-340q0 25 17.5 42.5T680-280Zm0 120q31 0 57-14.5t42-38.5q-22-13-47-20t-52-7q-27 0-52 7t-47 20q16 24 42 38.5t57 14.5ZM480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v227q-19-8-39-14.5t-41-9.5v-147l-240-90-240 90v188q0 47 12.5 94t35 89.5Q310-290 342-254t71 60q11 32 29 61t41 52q-1 0-1.5.5t-1.5.5Zm200 0q-83 0-141.5-58.5T480-280q0-83 58.5-141.5T680-480q83 0 141.5 58.5T880-280q0 83-58.5 141.5T680-80ZM480-494Z"
+                  />
+                </svg>
+                <span class="item-text"> Administración </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </section>
+
+    <!--#region alert dialogs and modals -->
+
+    <!--#endregion-->
+
+    <!--#region scripts and bootstrap CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!--#endregion-->
+  </body>
+</html>

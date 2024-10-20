@@ -1,0 +1,34 @@
+#progress-bar {
+  flex-grow: 1;
+  background-color: var(--mdc-theme-surface-2);
+  border: 1px solid var(--mdc-theme-stroke-color);
+  border-radius: 20px;
+  padding: 3px;
+  min-height: 35px; 
+}
+
+#progress-bar > .progress-inner {
+  width: 100%;
+  height: 100%;
+  background-color: var(--mdc-theme-secondary);
+  border-radius: 23px;
+  position: relative;
+}
+
+
+#progress-bar .progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  color: var(--mdc-theme-on-secondary);
+  user-select: none;
+}
+
+.banner-overlay {
+	background: 
+    url(../assets/bg-parking.webp) center  no-repeat;
+  background-size: cover;
+  image-rendering: crisp-edges;
+}
+ 

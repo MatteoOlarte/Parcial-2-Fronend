@@ -1,0 +1,11 @@
+.banner-overlay {
+	background: var(--mdc-static-theme-surface-inverse-3);
+  background-size: cover;
+  image-rendering: crisp-edges;
+}
+ 
+#reports-container {
+  overflow-y: scroll;
+  height: 100%;
+  max-height: 500px;
+}

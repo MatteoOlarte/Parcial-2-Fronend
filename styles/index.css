@@ -1,0 +1,71 @@
+body {
+	background: linear-gradient(
+				0deg,
+				rgba(0, 0, 0, 1) 0%,
+				rgba(0, 0, 0, 75%) 25%,
+				rgba(0, 0, 0, 50%) 50%,
+				transparent 100%
+			)
+			fixed no-repeat,
+		url(../assets/home-background.webp) center fixed no-repeat, center top no-repeat;
+}
+
+.hero-container {
+	width: auto;
+}
+
+.menu-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 100px);
+	gap: 15px;
+	grid-auto-rows: 100px;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-link {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  text-decoration: none;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 5px;
+  color: var(--mdc-theme-primary);
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.menu-link:hover {
+  color: var(--mdc-static-theme-on-surface-inverse-1);
+  transform: scale(1.5);
+}
+
+.menu-link > .item-icon {
+  fill: currentColor;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.menu-link > .item-text {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 480px) {
+	.hero-container {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 700px;
+	}
+  .menu-grid {
+    grid-template-columns: repeat(4, 100px);
+  }
+}

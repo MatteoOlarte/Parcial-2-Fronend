@@ -1,0 +1,8 @@
+.dropdown-menu {
+  --bs-dropdown-color: var(--mdc-theme-on-surface-1);
+  --bs-dropdown-bg: var(--mdc-theme-surface-2);
+  --bs-dropdown-border-color: var(--mdc-theme-stroke-color);
+  --bs-dropdown-link-active-color: var(--mdc-static-theme-on-primary);
+  --bs-dropdown-link-active-bg: rgba(var(--mdc-static-theme-primary-rbg), 25%);
+  --bs-dropdown-link-hover-bg: var(--mdc-theme-surface-3);
+}

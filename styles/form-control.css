@@ -1,0 +1,23 @@
+.form-control {
+  color: var(--mdc-theme-on-surface-1);
+  background-color: var(--mdc-theme-surface-1);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--mdc-theme-stroke-color);
+  border-radius: var(--bs-border-radius);
+}
+
+.form-control:focus {
+	color: var(--bs-body-color);
+	border-color: var(--mdc-theme-primary);
+	background-color: var(--mdc-theme-surface-1);
+	outline: 0;
+	box-shadow: 0 0 0 0.25rem rgba(var(--mdc-theme-primary-rbg), 25%);
+}
+
+.form-floating > .form-control:focus ~ label {
+	color: var(--mdc-theme-on-surface-2);
+}
+
+.form-floating > .form-control:focus ~ label::after {
+  background-color: var(--mdc-theme-surface-2);
+}

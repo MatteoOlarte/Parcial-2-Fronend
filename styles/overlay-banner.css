@@ -1,0 +1,19 @@
+.banner-overlay {
+	background: url(../assets/banner-img.webp) center center fixed no-repeat;
+	background-size: cover; /* Hace que la imagen ocupe todo el contenedor */
+	height: 480px;
+	position: relative; /* Establece el contexto de posicionamiento */
+}
+
+.banner-overlay .banner-overlay-content {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  width: 100%;
+}
+
+.banner-overlay .banner-title {
+  font-size: 4rem;
+  color: var(--mdc-static-theme-on-surface-inverse-1);
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
